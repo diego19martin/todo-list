@@ -4,6 +4,16 @@ import { Todolist } from "./components/Todolist";
 var id = 1;
 export function App(){
 
+    const toggleTodo = (id) => {
+        const newTodos = [...todos];
+        const todo = newTodos.find((todo) => todo.id === id)
+        
+        todo.completed = !todo.completed;
+
+        settodos(newTodos);
+
+    };
+
     
 
     const todoTaskRef = useRef();
@@ -33,10 +43,11 @@ export function App(){
 ]);
     return (
         <>
-            <Todolist todos={todos} />
+            <Todolist todos={todos} toggleTodo={toggleTodo} />
             <input ref={todoTaskRef} type = "text" placeholder = "Nueva Tarea" />
             <button onClick = {addTarea} >Cargar nueva tarea</button>
             <button onClick = {addTarea} >Eliminar Tarea</button>
+            
 
         </>
     ); 

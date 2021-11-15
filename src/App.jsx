@@ -47,8 +47,8 @@ export function App(){
             <input ref={todoTaskRef} type = "text" placeholder = "Nueva Tarea" />
             <button onClick = {addTarea} >Cargar nueva tarea</button>
             <button onClick = {addTarea} >Eliminar Tarea</button>
+            <div>Te quedan {todos.filter((todo) => !todo.completed).length} pendientes</div>
             
-
         </>
     ); 
     

@@ -14,9 +14,16 @@ export function App(){
 
     };
 
-    
-
     const todoTaskRef = useRef();
+
+    function deleteId (id) {
+        const newTodos = [...todos];
+        const todo = newTodos.find((todo) => todo.id === id);
+        const index = newTodos.indexOf(todo);
+        newTodos.splice(index,1); 
+        settodos(newTodos);
+
+    }
 
     function addTarea() {
 
@@ -43,11 +50,11 @@ export function App(){
 ]);
     return (
         <>
-            <Todolist todos={todos} toggleTodo={toggleTodo} />
-            <input ref={todoTaskRef} type = "text" placeholder = "Nueva Tarea" />
-            <button onClick = {addTarea} >Cargar nueva tarea</button>
-            <button onClick = {addTarea} >Eliminar Tarea</button>
-            <div>Te quedan {todos.filter((todo) => !todo.completed).length} pendientes</div>
+            
+            <input className="list input-group-text" ref={todoTaskRef} type = "text" placeholder = "Nueva Tarea" />
+            <button className="list btn btn-primary" onClick = {addTarea} >Cargar nueva tarea</button>
+            <Todolist className="list" todos={todos} toggleTodo={toggleTodo} deleteId={deleteId}/>
+            <div className="list">Te quedan {todos.filter((todo) => !todo.completed).length} pendientes</div>
             
         </>
     ); 

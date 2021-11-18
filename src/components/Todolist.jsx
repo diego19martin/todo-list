@@ -3,11 +3,11 @@ import { TodoItem } from "./TodoItem";
 
 
 
-export function Todolist({todos, toggleTodo}) {
+export function Todolist({todos, toggleTodo, deleteId}) {
     return (
         <ul>
             {todos.map((todo) =>(
-               <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} /> 
+               <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} deleteId={deleteId} /> 
             ))}
         </ul>
     );

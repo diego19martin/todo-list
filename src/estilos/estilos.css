@@ -1,0 +1,49 @@
+
+    body {
+        text-align: center;
+        width: 50%;
+        border-radius: 5px;
+        border: 5px solid black;
+        margin: 20px auto;
+ 
+    }
+
+    header {
+        background-color: pink;
+
+    }
+
+
+.todoList {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 5px;
+    align-items: center;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#9dd7ca+0,53ddc6+50,91e1d9+100 */
+    background: rgb(157,215,202); /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  rgba(157,215,202,1) 0%, rgba(83,221,198,1) 50%, rgba(145,225,217,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgba(157,215,202,1) 0%,rgba(83,221,198,1) 50%,rgba(145,225,217,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgba(157,215,202,1) 0%,rgba(83,221,198,1) 50%,rgba(145,225,217,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd7ca', endColorstr='#91e1d9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */    
+}
+
+.list {
+    margin: 15px auto;
+    text-align: center;
+    font-size: 1rem;
+    
+}
+.item{
+    text-align: left;
+}
+
+.delete {
+    border-radius: 4px;
+    margin-left: 20px;
+    height: 5px;
+    color: black;
+    font-weight: 800;
+    font-size: 25px;
+    
+}
